@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Tom Games Studio</title>
+<meta name="description" content="Terms of Service for Tom Games Studio titles and products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --washi:#F7F4EC; --washi-2:#F1EDE2; --white:#FDFCF8;
+    --ink:#1C1A17; --ink-2:#4A453D; --muted:#8A8478;
+    --hair:#D9D3C4; --hair-2:#C4BCA8; --seal:#B03A2E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--washi);
+    background-image:radial-gradient(rgba(28,26,23,.022) .7px, transparent .7px);
+    background-size:4px 4px;
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:15.5px;font-weight:400;line-height:1.92;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2{font-family:'Shippori Mincho',serif;font-weight:500;line-height:1.3;letter-spacing:.01em}
+  a{color:var(--seal)}
+  .wrap{max-width:840px;margin:0 auto;padding:0 32px}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(247,244,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .hanko{width:23px;height:23px;flex:none;background:var(--seal);border-radius:2px;display:grid;place-items:center}
+  .hanko span{font-family:'Shippori Mincho',serif;font-size:.56rem;color:var(--white);line-height:1}
+  .brand .nm{font-family:'Shippori Mincho',serif;font-weight:600;font-size:.98rem;letter-spacing:.06em}
+  .nav .back{font-size:.7rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .nav .back:hover{color:var(--seal)}
+
+  .head{padding:88px 0 44px}
+  .head .no{display:block;font-family:'Shippori Mincho',serif;font-size:.72rem;letter-spacing:.34em;color:var(--seal);margin-bottom:26px}
+  h1{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:18px}
+  .meta{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+  main{padding:8px 0 84px}
+  .intro{
+    border-left:1px solid var(--hair-2);padding:4px 0 4px 26px;margin-bottom:56px;
+    color:var(--ink-2);font-weight:300;
+  }
+  .caps{
+    display:block;margin-top:18px;padding-top:18px;border-top:1px solid var(--hair);
+    font-family:'Shippori Mincho',serif;font-size:.86rem;font-weight:500;line-height:1.75;color:var(--ink);
+  }
+  .blk{margin-bottom:44px}
+  .blk h2{font-size:1.06rem;margin-bottom:16px;display:flex;align-items:baseline;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--hair)}
+  .blk h2 .n{font-family:'Shippori Mincho',serif;font-size:.76rem;letter-spacing:.2em;color:var(--seal);flex:none}
+  .blk .c{padding-left:2px}
+  p{margin-bottom:12px;color:var(--ink-2);font-weight:300}
+  p:last-child{margin-bottom:0}
+  ul{list-style:none;margin:10px 0 0}
+  li{position:relative;padding-left:26px;margin-bottom:12px;color:var(--ink-2);font-weight:300}
+  li:before{content:"";position:absolute;left:5px;top:.78em;width:9px;height:1px;background:var(--hair-2)}
+  li:last-child{margin-bottom:0}
+  strong{color:var(--ink);font-weight:500}
+  .notice{
+    border-top:1px solid var(--seal);border-bottom:1px solid var(--seal);
+    padding:24px 0;color:var(--ink);font-weight:400;
+  }
+
+  .contactbox{border-top:1px solid var(--hair);margin-top:56px;padding-top:48px;text-align:center}
+  .contactbox .hanko2{width:64px;height:64px;margin:0 auto 28px;background:var(--seal);border-radius:3px;display:grid;place-items:center}
+  .contactbox .hanko2 span{writing-mode:vertical-rl;font-family:'Shippori Mincho',serif;color:var(--white);font-size:.7rem;letter-spacing:.2em;line-height:1.4}
+  .contactbox h2{font-size:1.3rem;margin-bottom:16px}
+  .contactbox p{color:var(--ink-2);margin-bottom:22px}
+  .contactbox .ent{font-family:'Shippori Mincho',serif;font-weight:600;font-size:1.02rem;margin-bottom:18px;letter-spacing:.04em}
+  .contactbox .mbox{display:inline-block;border-bottom:1px solid var(--hair-2);padding-bottom:6px}
+  .contactbox a{font-family:'Shippori Mincho',serif;font-size:.94rem;word-break:break-all}
+  .contactbox a:hover{border-bottom-color:var(--seal)}
+
+  footer{border-top:1px solid var(--hair);padding:36px 0 52px}
+  footer .frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  footer .cp{font-size:.74rem;color:var(--muted)}
+  footer nav{display:flex;gap:26px}
+  footer nav a{font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  footer nav a:hover{color:var(--seal)}
+  @media(max-width:600px){.blk .c{padding-left:0}.head{padding:56px 0 32px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="hanko"><span>富</span></span><span class="nm">Tom Games Studio</span></a>
+    <a class="back" href="/">← Return</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <span class="no">二 · Terms</span>
+    <h1>Terms of Service</h1>
+    <div class="meta">Effective 17 November 2026</div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <div class="intro">
+      <strong>Introduction.</strong> These Terms of Service constitute a legal agreement between you
+      and the developer of Tom Games Studio. ("we," "our," or "us").
+      <span class="caps">BY DOWNLOADING, INSTALLING, OR RETAINING A PRODUCT FOR MORE THAN TEN (10) DAYS,
+      YOU AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE WITH THESE TERMS AND CONDITIONS, YOU
+      MAY NOT DOWNLOAD OR USE THE PRODUCT AND MUST DELETE IT IMMEDIATELY.</span>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">壱</span>License</h2>
+      <div class="c">
+        <ul>
+          <li>You acknowledge that you have only a non-exclusive and limited right to use the object code version of the Products for non-commercial purposes within the validity period of the agreement.</li>
+          <li>You may make a single copy of the Products in object code form for archival or backup purposes.</li>
+          <li>You must include all Notices on all copies of the Products.</li>
+          <li>You may not reverse engineer, decompile, or disassemble the Products or attempt to gain access to the source code, except as expressly permitted by applicable law.</li>
+          <li>You may not assign or transfer the Products or any rights or obligations under these Terms without prior written consent from the developer.</li>
+          <li>Your rights under these Terms will automatically terminate if you breach any material obligations. Upon termination, you must destroy all copies of the Products immediately.</li>
+        </ul>
+        <p style="margin-top:14px">All rights not expressly granted are reserved.</p>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">弐</span>Infringement Indemnity</h2>
+      <div class="c">
+        <p>The developer, its affiliates, subsidiaries, or licensors shall not be liable for any claims arising from:</p>
+        <ul>
+          <li>Willful or negligent acts by anyone other than the Products provider.</li>
+          <li>The combination, operation, or use of the Products with any equipment, devices, or software not provided by the developer.</li>
+          <li>Changes or modifications to the Product.</li>
+        </ul>
+        <p style="margin-top:14px">To the fullest extent permitted by law, this section states the entire liability of the developer, its affiliates, subsidiaries, and licensors, as well as your sole remedy for any infringement claims.</p>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">参</span>Limited Warranty</h2>
+      <div class="c">
+        <p>The developer does not represent or warrant that the Products will operate uninterrupted or error-free, especially in the following cases:</p>
+        <ul>
+          <li>Unauthorized modification or changes to the Products.</li>
+          <li>Accidents, negligence, misuse, or abuse.</li>
+          <li>Exposure to environmental, power, or operating conditions outside the specifications provided by the developer.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">四</span>Disclaimer and Limitation of Liability</h2>
+      <div class="c">
+        <p>Except as expressly set forth in these Terms:</p>
+        <ul>
+          <li>The developer, its affiliates, subsidiaries, or licensors make no other warranties, express or implied, including warranties of merchantability and fitness for a particular purpose.</li>
+          <li>Any implied warranties imposed by law are limited to those contained in these Terms, and to the extent permitted by law, the developer disclaims all other warranties.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">五</span>User Judgment</h2>
+      <div class="c">
+        <ul>
+          <li>Some functions of the Products may cause certain programs, functions, or files to be stopped, deleted, or uninstalled.</li>
+          <li>Before using the Products, you should carefully read the instructions to determine whether they are suitable for your purposes, needs, and safety requirements.</li>
+          <li>Once you install the Product and/or perform any operation, you take full responsibility for its use.</li>
+        </ul>
+        <p style="margin-top:14px">We provide a <a href="/privacy/"><strong>Privacy Policy</strong></a> as an integral part of this agreement, which you must read and agree to before installing and using the Product.</p>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">六</span>Copyright Policy</h2>
+      <div class="c">
+        <ul>
+          <li>No end user may use the Products to infringe the intellectual property rights of others, including but not limited to patents, trademarks, trade secrets, copyrights, and other proprietary rights.</li>
+          <li>If you are a copyright owner or an authorized representative and believe that any content infringes on your copyright, you may file a notice under the Digital Millennium Copyright Act (DMCA) by providing us with:</li>
+        </ul>
+        <ul>
+          <li>A physical or electronic signature of a person authorized to act on behalf of the owner or agent of the allegedly infringing exclusive right.</li>
+          <li>Identification of the copyrighted work that you claim has been infringed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="blk">
+      <h2><span class="n">七</span>Disclaimer</h2>
+      <div class="c">
+        <div class="notice">This product is "not suitable for teenagers" as some advertisements may contain broad or inappropriate content.</div>
+      </div>
+    </div>
+
+    <div class="contactbox">
+      <div class="hanko2"><span>連絡</span></div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions or concerns about these Terms of Service, please contact us at:</p>
+      <div class="ent">Tom Games Studio.</div>
+      <div class="mbox"><a href="mailto:huu789ek@gmail.com">huu789ek@gmail.com</a></div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <div class="cp">© 2026 Tom Games Studio</div>
+      <nav><a href="/">Home</a><a href="/privacy/">Privacy</a></nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

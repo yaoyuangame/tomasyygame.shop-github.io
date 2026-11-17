@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom Games Studio — Quiet Games, Carefully Made</title>
+<meta name="description" content="Tom Games Studio makes calm casual games for mobile. Few features, considered deeply, held to a standard that lasts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --washi:#F7F4EC;
+    --washi-2:#F1EDE2;
+    --white:#FDFCF8;
+    --ink:#1C1A17;
+    --ink-2:#4A453D;
+    --muted:#8A8478;
+    --hair:#D9D3C4;
+    --hair-2:#C4BCA8;
+    --seal:#B03A2E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--washi);
+    background-image:radial-gradient(rgba(28,26,23,.022) .7px, transparent .7px);
+    background-size:4px 4px;
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;font-weight:400;line-height:1.9;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,.disp{font-family:'Shippori Mincho',Georgia,serif;font-weight:500;line-height:1.28;letter-spacing:.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+  .kanji{
+    font-family:'Shippori Mincho',serif;color:var(--muted);font-size:.72rem;
+    letter-spacing:.42em;text-transform:uppercase;
+  }
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:60;background:rgba(247,244,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:82px;gap:26px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .hanko{
+    width:26px;height:26px;flex:none;background:var(--seal);border-radius:2px;
+    display:grid;place-items:center;
+  }
+  .hanko span{
+    font-family:'Shippori Mincho',serif;font-size:.62rem;color:var(--white);
+    letter-spacing:0;line-height:1;
+  }
+  .brand .nm{font-family:'Shippori Mincho',serif;font-weight:600;font-size:1.02rem;letter-spacing:.06em}
+  .nav ul{display:flex;gap:34px;list-style:none}
+  .nav ul a{
+    font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);padding-bottom:3px;border-bottom:1px solid transparent;
+    transition:color .2s ease,border-color .2s ease;
+  }
+  .nav ul a:hover{color:var(--ink);border-bottom-color:var(--seal)}
+
+  /* ---------- hero ---------- */
+  .hero{padding:120px 0 108px;position:relative}
+  .hero .grid2{display:grid;grid-template-columns:1fr 58px;gap:52px;align-items:start}
+  .hero .label{
+    font-size:.72rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--muted);display:block;margin-bottom:38px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,5.6vw,4.1rem);font-weight:500;max-width:19ch;
+    margin-bottom:42px;letter-spacing:.005em;
+  }
+  .hero h1 em{font-style:normal;color:var(--seal)}
+  .hero p.lead{
+    max-width:52ch;color:var(--ink-2);font-weight:300;font-size:1.04rem;margin-bottom:48px;
+  }
+  .hero .btns{display:flex;gap:0;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-block;font-size:.76rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+    padding:14px 0;border-bottom:1px solid var(--ink);margin-right:40px;
+    transition:color .2s ease,border-color .2s ease;
+  }
+  .btn:hover{color:var(--seal);border-bottom-color:var(--seal)}
+  .btn.primary{color:var(--seal);border-bottom-color:var(--seal)}
+  .btn.primary:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+  /* vertical accent */
+  .vline{position:relative;height:100%;min-height:340px;display:flex;justify-content:center}
+  .vline:before{content:"";width:1px;height:100%;background:var(--hair-2);position:absolute;top:0}
+  .vline .vtext{
+    writing-mode:vertical-rl;font-family:'Shippori Mincho',serif;font-size:.72rem;
+    letter-spacing:.5em;text-transform:uppercase;color:var(--muted);
+    position:relative;background:var(--washi);padding:22px 0;
+  }
+
+  /* ---------- figures ---------- */
+  .figs{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--washi-2)}
+  .figs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .fig{padding:40px 20px;text-align:center;border-right:1px solid var(--hair)}
+  .fig:last-child{border-right:0}
+  .fig .v{font-family:'Shippori Mincho',serif;font-weight:500;font-size:1.85rem;line-height:1;margin-bottom:12px}
+  .fig .k{font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+  /* ---------- sections ---------- */
+  section{padding:112px 0}
+  .shead{max-width:56ch;margin-bottom:64px}
+  .shead .no{
+    display:block;font-family:'Shippori Mincho',serif;font-size:.74rem;letter-spacing:.34em;
+    color:var(--seal);margin-bottom:22px;
+  }
+  .shead h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:500;margin-bottom:22px}
+  .shead p{color:var(--ink-2);font-weight:300}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--hair)}
+  .card{padding:44px 32px 44px 0;border-right:1px solid var(--hair)}
+  .card:last-child{border-right:0;padding-right:0}
+  .card:nth-child(2),.card:nth-child(3){padding-left:34px}
+  .card .k{
+    font-family:'Shippori Mincho',serif;font-size:.72rem;letter-spacing:.28em;
+    color:var(--muted);display:block;margin-bottom:26px;
+  }
+  .card h3{font-size:1.1rem;font-weight:500;margin-bottom:14px}
+  .card p{font-size:.92rem;color:var(--ink-2);font-weight:300}
+
+  /* flagship */
+  .flag{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:96px 0;text-align:center}
+  .flag .sealmark{
+    width:88px;height:88px;margin:0 auto 40px;background:var(--seal);border-radius:3px;
+    display:grid;place-items:center;
+  }
+  .flag .sealmark span{
+    writing-mode:vertical-rl;font-family:'Shippori Mincho',serif;color:var(--white);
+    font-size:.8rem;letter-spacing:.28em;line-height:1.5;
+  }
+  .flag h2{font-size:clamp(1.8rem,3.8vw,2.9rem);font-weight:500;max-width:22ch;margin:0 auto 28px}
+  .flag p{max-width:60ch;margin:0 auto 18px;color:var(--ink-2);font-weight:300}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:40px}
+  .tag{font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair-2);padding:8px 16px}
+
+  /* principles */
+  .plist{border-top:1px solid var(--hair)}
+  .prow{display:grid;grid-template-columns:96px 1fr 1.25fr;gap:0;padding:34px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+  .prow .c{
+    font-family:'Shippori Mincho',serif;font-size:.8rem;letter-spacing:.22em;color:var(--seal);
+  }
+  .prow h3{font-size:1.04rem;font-weight:500}
+  .prow p{font-size:.9rem;color:var(--ink-2);font-weight:300;padding-left:30px}
+
+  /* contact */
+  .contact{padding:112px 0 96px;border-top:1px solid var(--hair)}
+  .contact .grid2{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .contact h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:500;margin-bottom:24px}
+  .contact p{color:var(--ink-2);font-weight:300}
+  .boxes{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--hair)}
+  .mbox{padding:26px 0;border-bottom:1px solid var(--hair)}
+  .mbox small{display:block;font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+  .mbox a{font-family:'Shippori Mincho',serif;font-size:1rem;letter-spacing:.015em;word-break:break-all;border-bottom:1px solid var(--hair-2)}
+  .mbox a:hover{color:var(--seal);border-bottom-color:var(--seal)}
+
+  /* footer */
+  footer{border-top:1px solid var(--hair);padding:44px 0 60px}
+  footer .frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:22px;align-items:center}
+  footer .cp{font-size:.76rem;color:var(--muted);letter-spacing:.04em}
+  footer nav{display:flex;gap:30px}
+  footer nav a{font-size:.68rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  footer nav a:hover{color:var(--seal)}
+
+  @media(max-width:900px){
+    .nav ul{display:none}
+    .hero{padding:64px 0 68px}
+    .hero .grid2{grid-template-columns:1fr;gap:0}
+    .vline{display:none}
+    .figs .wrap{grid-template-columns:repeat(2,1fr)}
+    .fig:nth-child(2){border-right:0}
+    .fig:nth-child(1),.fig:nth-child(2){border-bottom:1px solid var(--hair)}
+    .cards{grid-template-columns:1fr}
+    .card{border-right:0;border-bottom:1px solid var(--hair);padding:32px 0!important}
+    .card:last-child{border-bottom:0}
+    .prow{grid-template-columns:58px 1fr;row-gap:8px}
+    .prow p{grid-column:1/-1;padding-left:0}
+    .contact .grid2{grid-template-columns:1fr;gap:40px}
+    section{padding:64px 0}
+    .flag{padding:64px 0}
+    .contact{padding:64px 0 56px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="hanko"><span>富</span></span><span class="nm">Tom Games Studio</span></a>
+    <ul>
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap grid2">
+    <div>
+      <span class="label">Independent Game Studio</span>
+      <h1>Quiet games,<br>made with <em>care</em>.</h1>
+      <p class="lead">
+        Tom Games Studio builds calm casual games for phones. We keep the surface small and the
+        craft deep: few features, each considered until there is nothing left to remove, and a
+        support horizon measured in years rather than launch windows.
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#work">See the work</a>
+        <a class="btn" href="#contact">Write to us</a>
+      </div>
+    </div>
+    <div class="vline"><span class="vtext">Tom Games Studio · 2026</span></div>
+  </div>
+</div>
+
+<div class="figs">
+  <div class="wrap">
+    <div class="fig"><div class="v">2019</div><div class="k">Established</div></div>
+    <div class="fig"><div class="v">18</div><div class="k">Titles</div></div>
+    <div class="fig"><div class="v">26M</div><div class="k">Installs</div></div>
+    <div class="fig"><div class="v">0</div><div class="k">Forced Waits</div></div>
+  </div>
+</div>
+
+<section id="studio">
+  <div class="wrap">
+    <div class="shead">
+      <span class="no">一 · The Studio</span>
+      <h2>We remove until it feels inevitable.</h2>
+      <p>
+        Most studios begin with a feature list and negotiate downward. We begin with the smallest
+        version that could work, and only add when playtesting proves the game is worse without it.
+        The result is a catalogue that looks sparse and plays complete.
+      </p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="k">間 · Space</span>
+        <h3>Interfaces that breathe</h3>
+        <p>Margins are a feature. If an element is not helping you play, it is taken away rather than made prettier.</p>
+      </div>
+      <div class="card">
+        <span class="k">静 · Quiet</span>
+        <h3>No manufactured pressure</h3>
+        <p>No timers, no streak decay, no countdown offers. Nothing in our games punishes you for putting the phone down.</p>
+      </div>
+      <div class="card">
+        <span class="k">続 · Continuity</span>
+        <h3>Supported for years</h3>
+        <p>A title from 2020 still receives compatibility work. A release is the start of upkeep, not the end of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flag" id="work">
+  <div class="wrap">
+    <div class="sealmark"><span>完成</span></div>
+    <h2>Tom — a puzzle with no clock and no penalty.</h2>
+    <p>
+      Our flagship release is a hand-authored deduction puzzle. There is no timer, no fail state,
+      and no resource that drains while you think.
+    </p>
+    <p>
+      Each board introduces a single idea and asks you to combine it with everything the game has
+      taught so far. Hints are free and unlimited, progress is written on every move, and the whole
+      game runs offline.
+    </p>
+    <div class="tags">
+      <span class="tag">Puzzle</span>
+      <span class="tag">Offline</span>
+      <span class="tag">No Fail State</span>
+      <span class="tag">Free to Start</span>
+    </div>
+  </div>
+</div>
+
+<section id="principles">
+  <div class="wrap">
+    <div class="shead">
+      <span class="no">二 · Principles</span>
+      <h2>Four commitments we do not trade.</h2>
+    </div>
+    <div class="plist">
+      <div class="prow">
+        <div class="c">壱</div>
+        <h3>No manufactured waiting</h3>
+        <p>Energy meters and cooldowns are not added to games that do not need them. Difficulty belongs in the puzzle, never in the shop.</p>
+      </div>
+      <div class="prow">
+        <div class="c">弐</div>
+        <h3>Price before the tap</h3>
+        <p>Anything purchasable is priced and described before you commit. No invented scarcity, no recurring “limited” offers.</p>
+      </div>
+      <div class="prow">
+        <div class="c">参</div>
+        <h3>Minimal collection</h3>
+        <p>We gather only what is required to run and improve the game, stated plainly in our <a href="/privacy/" style="border-bottom:1px solid var(--hair-2)">privacy policy</a>.</p>
+      </div>
+      <div class="prow">
+        <div class="c">四</div>
+        <h3>Fix before feature</h3>
+        <p>A known crash is repaired before new content starts. A broken build is not a roadmap item — it is a broken product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div class="wrap grid2">
+    <div>
+      <span class="no" style="display:block;font-family:'Shippori Mincho',serif;font-size:.74rem;letter-spacing:.34em;color:var(--seal);margin-bottom:22px">三 · Contact</span>
+      <h2>Write to the studio</h2>
+      <p>
+        Publishers, partners and players reach the same inbox, and it is read by the people who
+        build the games. Enquiries are answered in the order they arrive.
+      </p>
+    </div>
+    <div class="boxes">
+      <div class="mbox">
+        <small>General &amp; Player Support</small>
+        <a href="mailto:huu789ek@gmail.com">huu789ek@gmail.com</a>
+      </div>
+      <div class="mbox">
+        <small>Business &amp; Publishing</small>
+        <a href="mailto:huu789ek@gmail.com">huu789ek@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap frow">
+    <div class="cp">© 2026 Tom Games Studio. All rights reserved.</div>
+    <nav>
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
